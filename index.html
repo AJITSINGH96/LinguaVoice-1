@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <title id="title">LinguaVoice PDF</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to the CSS file -->
+    <script src="languageoption.js" defer></script>        
+</head>
+<body>
+    <img id="profile-icon" src="profile.png" alt="Profile Icon">
+    <!-- Sidebar panel (initially hidden) -->
+    <div id="tophead">
+        <img id="icon" src="profile.png" alt="Edit Icon">
+        <div id="profile-items">
+        <!-- <input type="text" id="name-input" placeholder="Enter your name">
+        <input type="email" id="email-input" placeholder="Enter your email">
+        <input type="tel" id="mobile-input" placeholder="Enter your mobile number"> -->
+        <button id="signup-btn">Sign Up </button>
+        <button id="logout-btn">Sign Out </button>
+        <button id="Subscribe" title="You don't need any Subscription for now. Feel free to give your Rating and Comment on Chrome Web Store to let us know what we can do better! ThankYou.">Subscribe Now </button>
+        <!-- More elements can be added here -->
+    </div>
+    </div>
+    
+    <div id="container">
+        <header>
+            <div id="header-container">
+                <h1 id="welcome-header">
+                    <span class="letter" style="color: red;">L</span>
+                    <span class="letter" style="color: orange;">i</span>
+                    <span class="letter" style="color: yellow;">n</span>
+                    <span class="letter" style="color: rgb(0, 255, 98);">g</span>
+                    <span class="letter" style="color: blue;">u</span>
+                    <span class="letter" style="color: indigo;">a</span>
+                    <span class="letter" style="color: violet;">V</span>
+                    <span class="letter" style="color: rgb(0, 255, 98);;">o</span>
+                    <span class="letter" style="color: blue;">i</span>
+                    <span class="letter" style="color: indigo;">c</span>
+                    <span class="letter" style="color: violet;">e</span>
+                </h1>
+                <!-- <div id="topeverything">
+                    <button id="Whatweoffer">What we Offer</button>
+                    <button id="icon_details">Icon Details</button>
+                    <button id="how_to_use">How To Use</button>
+                </div> -->
+                <div id="topeverything">
+                    <button id="findcountrybtn">Find Countries by Language</button>
+                   
+                    <div class="button-container">
+                        
+                        <button id="Whatweoffer">What we Offer</button>
+                        <div class="offer-list">
+                            <ul>
+                                <li>1-Convert Text to other Languages.</li>
+                                <li>2-Select Any Text, right click on it,Click on Extension name and speak the Text in Selected dialect.</li>
+                                <li>3-Speak Input Text.</li>
+                                <li>4-Speak Output Text.</li>
+                                <li>5-Save Input Text in pdf form.</li>
+                                <li>6-Save Translated Text in pdf form.</li>
+                                <li>7-Extract Text from images.</li>
+                                <li>8-Search input word and Translated words directly in Dictionary.</li>
+                                <li>9-Search input word and Translated words directly in Wikipedia.</li>
+                                <li>10-Search input word and Translated words directly in ChatGpt.</li>
+                                <li>11-Detect copied Text Language and set it automatically.</li>
+                                <li>12-Search input word and Translated words directly in ChatGpt.</li>
+                                <li>13-Voice input and Translated voice Output.</li>
+                                <li>14-Find Countries by Language.</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- <div class="button-container">
+                        <button id="icon_details">Icon Details</button>
+                        <div class="icon-list">
+                            <ul>
+                                <li>Speak Icon</li>
+                                <li>Save Icon</li>
+                                <li>Translate Icon</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="button-container">
+                        <button id="how_to_use">How To Use</button>
+                        <div class="use-list">
+                            <ul>
+                                <li>Click on Translate</li>
+                                <li>Speak the Text</li>
+                                <li>Save as PDF</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+                
+                
+                
+                
+            </div>
+        </header>
+    <!-- <textarea id="text-to-translate" rows="10" cols="50" placeholder="what would you like to Translate today?.."></textarea> -->
+    <!-- <textarea id="text-to-translate" rows="10" cols="50" placeholder="Can I Translate Something for you today?.."></textarea> -->
+    <div class="container-box">
+        <div class="top-buttons">
+            <button id="start-button" title="Extract Text From Image"><img src="imageprocess.png" alt="Image to Text"></button>
+            <button id="drive-access-btn" title="Connect Google Drive"><img src="googledrive.png" alt="Google Drive"></button>
+        </div>
+ 
+        
+        <div class="textarea-container">
+            <div class="textarea-group">
+                <div class="button-container">
+                    <select id="input-language"></select>
+                    <textarea id="text-to-translate" rows="10" cols="50" placeholder="Type to Translate....&#10;-Add Images to Extract Text and Convert to desired language.&#10;-Generate pdf from the Text with Single Click&#10;-Find meaning of words from Dictionary."></textarea>
+                    <div class="input-buttons">
+                        <button id="speak-button" title="Speak-input"><img src="speak.png" alt="Speak button"></button>
+                        <button id="save-input" title="Save as pdf"><img src="pdf.png" alt="Save as pdf"></button>
+                        <button id="askChatGPT_input" title="ChatGPT"><img src="chatgpt.png" alt="ChatGPT"></button>
+                        <button id="wikipedia-input" title="Wikipedia"><img src="wiki.png" alt="Wikipedia"></button>
+                        <button id="Dictionary_input" title="Find in Dictionary"><img src="Dictionary.png" alt="Dictionary"></button>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="middle-buttons">
+                <div class="button-group">
+                    <button id="translate-button" title="Translate"><img src="translate.png" alt="Translate"></button>
+                    <button id="clear_btn" title="Clear ALL"><img src="clear.PNG" alt="Clear All"></button>
+                    
+                    <button id="stop-button" title="Mute"><img src="mute.png" alt="Mute"></button>
+                    <button id ="voice-input-btn" title="Click once to give voice input and wait for translation. Click again to Listen to the Translated Value."><img src="sepakinput.png" alt="Music"> </button><br>
+                    
+                </div>
+               
+            </div>
+            <div class="textarea-group">
+                <div class="button-container">
+                    <select id="target-language"></select>
+                    <textarea id="translated-text" rows="10" cols="50" placeholder="Your translated text will appear here..." readonly></textarea>
+                    <div class="output-buttons">
+                        <button id="speak-translation" title="Speak Translated Output"><img src="speak.png" alt="Speak output"></button>
+                        <button id="save-pdf" title="Save as pdf"><img src="pdf.png" alt="Save as pdf"></button>
+                        <button id="askChatGPT_output" title="ChatGPT"><img src="chatgpt.png" alt="ChatGPT"></button>
+                        <button id="wikipedia-output" title="Wikipedia"><img src="wiki.png" alt="Wikipedia"></button>
+                        <button id="Dictionary_output" title="Find in Dictionary"><img src="Dictionary.png" alt="Dictionary"></button>
+                    </div>
+                </div>
+            </div>
+           
+            
+            
+        </div>
+    </div>
+    <hr>
+    
+   
+    
+    <div class="volume-container"> 
+        <label for="volume-control" id="volume">Speech Rate:</label>
+        <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+        <button id="showInputs" title="You can find songs Lyrics and Translate them in different languages, though for now it will not find all the songs, mostly famous and English songs will appear in this version 1.0."><img src="music.png" alt="Music"> </button>
+        
+    </div>
+    <button id="fetchLyrics"></button>
+    </div>     
+    <script src="pdf/jspdf.umd.min.js"></script>
+    <script src="popup.js"></script>
+    <script src="inputWindow.js"></script>
+    <div id="contact-popup">
+        <button id="close-popup">Close</button>
+        <div style="display: flex; align-items: center;">
+            <img src="flag.png"><br>
+            <h3>Contact Information:</h3>
+        </div>
+        <p>Name:Ajit Singh<br>Email: LinguaVoice1@gmail.com or ajit.aj01@gmail.com<br>Phone: +91-8288002044<br>Linkedin:https://www.linkedin.com/in/ajit-singh-04ba26194</p>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <button class="footer-btn" id="contactbtn" title="Contact Details">Contact Us</button>
+            <button class="footer-btn" title="Current Extension Version">version 1.0.0</button>
+            <!-- <button class="footer-btn">How to Use</button> -->
+            <button class="footer-btn" id="Developersprofile" title="Redirect to Developer's LinkedIn profile">
+                Developer's Profile
+            </button>
+        </div>
+    </footer>
+</div>
+  
+</body>
+</html>
+

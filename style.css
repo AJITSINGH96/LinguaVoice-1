@@ -1,0 +1,843 @@
+/* General body styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    /* font-family: Arial, sans-serif; */
+}
+#title{
+    margin-left: 6rem;
+}
+#tophead {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Start hidden off-screen */
+    width: 19.5vw; /* Adjust the width as needed */
+    height: 100vh;
+    background-color: #7695FF;
+    gap: 1vh; /* Add spacing between items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.5s ease; /* Smooth sliding transition */
+    z-index: 1000; /* Ensure it's above other content */
+    
+}
+#allbuttons{
+    background-color: #7695FF;
+}
+#profile-items {
+    margin-top: 2vh;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    width: 80%; /* Ensure it uses the full width */
+    gap: 1vh; /* Add spacing between items */
+    border-radius: 10%;
+}
+/* Styles for the name input field */
+#name-input, #email-input, #mobile-input, #signup-btn ,#Subscribe,#logout-btn{
+    border-radius: 5px; /* Apply rounded corners */
+    border: 1px solid #ccc; /* Border style */
+    padding: 0.5em; /* Padding inside the input/button */
+    width: 100%; /* Make it take the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+#signup-btn:hover {
+    background-color: rgb(99, 211, 30); 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#logout-btn:hover {
+    background-color: rgb(99, 211, 30); 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#Subscribe:hover {
+    background-color: rgb(99, 211, 30);  
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+/**update*/
+#profile-icon {
+    position: absolute;
+    top: 1vh;
+    left: 0.5vw;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    z-index: 2000; /* Ensure the icon is clickable and above other elements */
+    border-radius: 50%;
+}
+
+p{
+    position: relative;
+    color: black;
+    font-size: 2rem; 
+    font-family: 'Times New Roman', serif; /* Font family */
+    box-shadow: none; /* Remove any default box-shadow */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#icon {
+    position: relative;
+    cursor: pointer;
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+}
+#name-input {
+    position: relative;
+    display: none; /* Hide input field by default */
+}
+
+
+#profile-icon {
+    position: absolute;
+    top: 1vh;
+    left: 0.5vw;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    z-index: 2000; /* Ensure the icon is clickable and above other elements */
+    border-radius: 50%;
+}
+#header-container {
+    display: flex;
+    justify-content: space-between; /* Keeps heading on the left and buttons on the right */
+    align-items: center; /* Vertically aligns heading and buttons in the center */
+    width: 100%; /* Ensures it takes up full width of the screen */
+    padding: 0 20px; /* Adds padding to the left and right */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    background-color: #007bff;
+}
+
+/* Heading styling */
+#welcome-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: -3px; /* Reduces space between letters */
+    padding-left: 4rem; /* Adds a more reasonable margin to the left */
+    margin-top: 0.7rem;
+    margin-bottom: 1rem; 
+}
+
+/* Button container styling */
+#topeverything {
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+    margin-right: 4rem;
+}
+
+
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the buttons */
+ #Whatweoffer, #how_to_use {
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;   
+    color: black;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    height: 3rem;
+    width: 9rem;
+    padding: 0.2em 0.5em;
+    border: none;
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+#findcountrybtn  {
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    height: 3rem;
+    width: 14rem;
+    padding: 0.2em 0.5em;
+    border: none;
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+
+/* Hide the lists by default */
+.offer-list, .icon-list, .use-list {
+    display: none;
+    position: absolute;
+    background-color: rgba(15, 13, 13, 0.8); /* Transparent background */
+    color: white;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    margin-top: 0.6rem;
+    padding-right: 0.5rem;
+    margin-left: 0;
+    padding-left: 0;
+    width: 20rem;
+    height: 28rem;
+    top: 100%; /* Position the list just below the button */
+    right: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style-type: none; /* Remove bullet points */
+}
+
+/* Show the list when hovering over the respective button */
+.button-container:hover .offer-list, 
+.button-container:hover .icon-list, 
+.button-container:hover .use-list {
+    display: block;
+}
+
+
+/*image processing buttons*/
+#start-button,#drive-access-btn{
+    height: 3rem;
+    width:3rem;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 1px;
+    border: none;
+}
+#start-button,#drive-access-btn:hover{
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+
+
+
+
+
+/* Show the list when hovering over the button */
+#findcountrybtn:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;    
+    transition: background-color 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+#Whatweoffer:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;    
+    transition: background-color 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+#icon_details:hover{
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: yellow;
+}
+#how_to_use:hover{  
+    color: yellow;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */    
+}
+/* Container for the entire layout */
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #dbe3e6;
+    box-sizing: border-box;
+    z-index: -1000;
+}
+#wikipedia-input {
+    position: relative;
+    background-color: transparent;
+    height:4rem;
+    width:4rem;
+    border-radius: 25px;
+    padding: 0.5em 1em; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#wikipedia-output {
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+   
+    padding: 0.5em 1em; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#input-language{
+    position:relative;
+    width: 5rem;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+}
+#target-language{
+    position: relative;
+    margin-top: 0;
+    width: 5rem;
+    border-radius: 5px;
+}
+#translate-button {
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+  
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#speak-button {
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+    padding: 0; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#speak-translation {
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+
+    padding: 0.5em 1em; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+}
+#stop-button {
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+   
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#voice-input-btn {
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+   
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+
+#save-pdf{/*for translated result*/
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+    padding: 0.5em 1em; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#save-input{
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+   
+    padding: 0.5em 1em; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+
+#clear_btn{
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#askChatGPT_input{
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#askChatGPT_output{
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;  
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+
+#Dictionary_input{
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+#Dictionary_output{
+    position: relative;
+    background-color: transparent; 
+    border-radius: 25px;
+    height:4rem;
+    width:4rem;    
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+}
+.middle-buttons {
+    display: flex;
+    flex-direction: column; /* Arrange buttons and volume vertically */
+    align-items: center;
+    margin-top: 20vh; /* Space above middle-buttons */    
+}
+
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem; /* Space between the buttons */
+}
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between label and slider */
+    margin-left: 8rem;
+    margin-bottom: 5rem;
+}
+
+#volume {
+    font-size: 14px;
+}
+
+#volume-control {
+    width: 150px; /* Adjust the width of the slider */
+    
+}
+#Dictionary_input:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#Dictionary_output:hover{
+    border-radius: 50%;
+    background-color:white;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#askChatGPT_input:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#askChatGPT_output:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#clear_btn:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#voice-input-btn:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+
+#wikipedia-input:hover {
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+   
+   
+}
+#wikipedia-output:hover {
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#translate-button:hover {
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#speak-button:hover  {
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#stop-button:hover {
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    animation: stopcolor-change 5s infinite; /* Infinite color-changing animation */    
+}
+@keyframes stopcolor-change {   
+    50% {
+        background-color: rgb(241, 62, 62); /* Mid color */
+    }
+    100% {
+        background-color:white;
+    }
+}
+
+#speak-translation:hover {
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#save-pdf:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+#save-input:hover{
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+
+/* Container for text areas */
+/* Container for the entire layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+.container-box {
+    
+    border-radius: 2px; /* Rounded corners */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 90vw; /* Adjust the width of the box */
+    background-color: #dbe3e6;
+   
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.textarea-container {
+    display: flex;
+    align-items: stretch; /* Ensure the text areas stretch to fill the container */
+    position: relative;
+    gap: 0px; /* Reduced gap between the two textarea-groups */
+    
+
+    margin: 0 auto; /* Center the container horizontally */
+    box-sizing: border-box; /* Ensure padding and margins are included in the width calculation */
+}
+
+.textarea-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;    
+    background-color: rgb(32, 32, 32);
+    transform: translateX(-50%);
+}
+
+.textarea-group {
+    flex: 1; /* Ensure each group takes equal space */
+    
+}
+#text-to-translate,#translated-text{
+    height:60vh;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+#text-to-translate::placeholder {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #888; /* Optional: Change the placeholder text color */
+}
+#translated-text::placeholder {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #888; /* Optional: Change the placeholder text color */
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Maintain space between elements inside button-container */
+}
+
+textarea {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+}
+textarea:focus {
+    outline: none;
+}
+
+.input-buttons, .output-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Adjust gap as needed */
+    margin-top: auto; /* Push buttons to the bottom of the container */
+}
+
+/* Styling for buttons inside button-container */
+.button-container button {
+    margin: 0px; /* Optional margin around each button */
+}
+/*footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Background color for the footer */
+    color: white; /* Text color for the footer */
+    padding: 1em; /* Padding around the footer content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for visual depth */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 1em; /* Spacing between buttons */
+}
+
+.footer-btn {
+    background-color: #007bff; /* Background color for buttons */
+    color: white; /* Text color for buttons */
+    border: none; /* Remove default border */
+    padding: 0.5em 1em; /* Padding inside buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 0.5em; /* Font size for buttons */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.footer-btn:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+/**update/
+
+/******song search******/
+#showInputs {
+    position: relative; /* Use relative positioning to adjust within its normal flow */    
+    margin-left: 70vw; /* Push the button towards the right */
+    width:5rem;   
+    height:5rem; 
+    border-radius: 50%;
+    padding: 0.5em 1em; /* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    display: inline-block; /* Ensure it behaves as an inline element for margin adjustments */
+}
+
+#showInputs:hover{
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    animation: color-change 2s infinite; /* Infinite color-changing animation */    
+}
+@keyframes color-change {
+    0% {
+        background-color: rgb(221, 14, 221); /* Start color */
+    }
+    25% {
+        background-color: rgb(245, 13, 13); /* Mid color */
+    }
+    50% {
+        background-color: rgb(247, 243, 10); /* Another color */
+    }
+    75% {
+        background-color: rgb(124, 221, 14); /* Another transition color */
+    }
+    100% {
+        background-color: rgb(51, 7, 250); /* End color (loop back to start) */
+    }
+}
+
+#modal {
+    display: none; /* Hide modal initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    max-width: 500px;
+    background: none;
+    
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#modalHeader {
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+}
+
+
+
+#inputContainer, #lyricsContainer {
+    display: none; /* Hide input and lyrics containers initially */
+}
+#lyricsContainer {
+    display: none; /* Hide lyrics container initially */
+    overflow: auto; /* Enable scrollbars if needed */
+    max-height: 300px; /* Adjust height as needed */
+    position: fixed; /* Fix position to make it separate from main body */
+    bottom: 0; /* Position at the bottom */
+    right: 0; /* Position at the right */
+}
+
+
+#lyrics {
+    white-space: pre-wrap;
+}
+
+#closeLyrics {
+    margin-top: 10px;
+}
+
+
+/*footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Background color for the footer */
+    color: white; /* Text color for the footer */
+    padding: 1em; /* Padding around the footer content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for visual depth */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 1em; /* Spacing between buttons */
+}
+
+.footer-btn {
+    background-color: #007bff; /* Background color for buttons */
+    color: white; /* Text color for buttons */
+    border: none; /* Remove default border */
+    padding: 0.5em 1em; /* Padding inside buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for buttons */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.footer-btn:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* contact me Pop-up styling */
+#contact-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears on top */
+    border-radius: 8px;
+    font-family: 'Arial, sans-serif';
+}
+
+#contact-popup h3 {
+    margin-top: 1rem;
+}
+
+#close-popup {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+}

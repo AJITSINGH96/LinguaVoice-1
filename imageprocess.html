@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image to Text OCR</title>
+
+  <style>
+    body {
+      width: 600px;
+      height: 400px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: flex-start; /* Align items to the top */
+      font-family: Arial, sans-serif; /* Optional: Set a default font */
+    }
+    #file-container {
+      width: 100%;
+      display: flex;
+      
+      padding: 10px;
+    }
+    #upload {
+      margin-right: 10px; /* Space between button and text */
+    }
+    #no-file-text {
+      font-size: 16px; /* Adjust font size if needed */
+      display: block; /* Ensure this is visible initially */
+    }
+    #image-container {
+  width: 100%;
+  max-width: 100%;
+  max-height: 70%;
+  overflow: auto;
+  padding: 10px; /* Add padding if needed */
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  position: relative; /* Allow positioning of zoom buttons */
+}
+    #uploaded-image {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      transition: transform 0.3s; /* Smooth zoom transitions */
+    }
+    #result {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #ccc; /* Add a border for better visibility */
+      box-sizing: border-box; /* Ensure padding is included in the width/height */
+    }
+    hr {
+      width: 100%; /* Make the horizontal line span the width of the container */
+      border: 0;
+      border-top: 1px solid #ccc; /* Style the horizontal line */
+      margin: 10px 0; /* Add vertical spacing */
+    }
+    h3 {
+      text-align: left; /* Align the header to the left */
+      width: 100%; /* Ensure it spans the width of the container */
+      margin: 0; /* Remove default margin for a cleaner look */
+      padding: 0; /* Remove default padding */
+    }
+    #zoom-controls button {
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+    #zoom-in {      
+    border-radius: 5px;
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+    }
+    #zoom-in:hover{
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: blue;
+   }
+   #zoom-out {      
+    border-radius: 5px;
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+    }
+    #zoom-out:hover{
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: blue;
+   }
+    #copy-button {      
+    border-radius: 5px;
+    padding: 0.5em 1em;/* Add padding for spacing around text */
+    border: none;
+    box-shadow: none; /* Remove any default box-shadow */
+    margin-top: 0;
+    }
+    #copy-button:hover{
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: blue;
+   }
+   /* Add styles for the copied message */
+   #copied-message {
+      display: none; /* Initially hidden */
+      position:fixed; /* Fix the position at the bottom */
+      font-family: 'Times New Roman', Times, serif;
+      bottom: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background-color: #31363F; /* Green background */
+      color: white; /* White text */
+      border-radius: 5px; /* Rounded corners */
+      font-size: 14px;
+      transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    }
+  </style>
+</head>
+<body>
+    <div id="file-container">
+      <input type="file" id="upload" />
+      <span id="no-file-text"></span>
+    </div>
+    <div id="image-container">
+      <img id="uploaded-image" style="display: none;" />
+    </div>
+    <div id="zoom-controls">
+        
+        <button id="zoom-in"title="Zoom In"><img src="icons/ZoomIn.png" alt="Zoom In"></button><!--zoom In button-->
+        <button id="zoom-out"title="Zoom Out"><img src="icons/ZoomOut.png" alt="Zoom Out"></button><!--zoomout button-->
+        <button id="copy-button"title="Copy Result to Clipboard"><img src="icons/copybutton.png" alt="Copy Result to Clipboard"></button><!--copy-->
+      </div>
+    <hr> <!-- Horizontal line -->
+    <h3>Result</h3> <!-- Header for result section -->
+    <div id="result"></div>
+    <div id="copied-message">Copied</div> <!-- Copied message -->
+    <script src="imageprocess.js"></script>
+</body>
+</html>
