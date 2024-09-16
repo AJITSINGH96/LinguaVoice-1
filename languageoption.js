@@ -155,7 +155,7 @@ function updateHeaderWithUserName() {
 // Function to detect language using Google Cloud Translation API
 
 async function detectLanguage(text) {
-    const apiKey = 'AIzaSyA3K2WZJ2_J_023R5UXR9Dy3KORVVWPcYU'; // Replace with your Google Cloud Translation API key
+    const apiKey = 'jfdgsdfgvbj'; // Replace with your Google Cloud Translation API key
     const url = `https://translation.googleapis.com/language/translate/v2/detect?key=${apiKey}`;
 
     try {

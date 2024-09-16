@@ -35,7 +35,7 @@
       "extension_pages": "script-src 'self'; object-src 'self'"
     },
     "oauth2": {
-      "client_id": "562374797209-5qb0dqda5756jldqt2jh6d3ls0q6kf2g.apps.googleusercontent.com",
+      "client_id": "Paste your google client auth 2.0 key",
       "scopes": [
         "https://www.googleapis.com/auth/drive.readonly",
         "https://www.googleapis.com/auth/userinfo.profile",

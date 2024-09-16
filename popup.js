@@ -44,7 +44,7 @@ function stopSpeech() {
 
 //works same as detectLanguage() in langugageoption.js,just written here also to set input language of user's text  
 async function setinputLanguage(text) {
-    const apiKey = 'AIzaSyA3K2WZJ2_J_023R5UXR9Dy3KORVVWPcYU'; // Replace with your Google Cloud Translation API key
+    const apiKey = 'dhjfgbhjdfg'; // Replace with your Google Cloud Translation API key
     const url = `https://translation.googleapis.com/language/translate/v2/detect?key=${apiKey}`;
 
     try {
@@ -82,7 +82,7 @@ document.getElementById('translate-button').addEventListener('click', async () =
     }
     
     const targetLanguage = document.getElementById('target-language').value;
-    const apiKey = 'AIzaSyA3K2WZJ2_J_023R5UXR9Dy3KORVVWPcYU';  // Replace with your actual API key
+    const apiKey = 'jfgjsdffbsdjgb';  // Replace with your actual API key
 
     // Stop any ongoing speech before translating
     stopSpeech();
